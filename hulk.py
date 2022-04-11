@@ -127,7 +127,6 @@ class MonitorThread(threading.Thread):
 			if (previous+9999<request_counter) & (previous<>request_counter):
 				print "%d Requests Sent" % (request_counter)
 				previous=request_counter
-		if flag==2:
 			print "\n-- HULK Attack Finished --"
 
 #execute 
