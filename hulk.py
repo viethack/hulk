@@ -97,8 +97,8 @@ def httpcall(url):
 	except urllib2.HTTPError, e:
 			#print e.code
 			set_flag(1)
-			print 'Response Code 1000'
-			code=1000
+			print 'Response Code 2000'
+			code=2000
 	except urllib2.URLError, e:
 			#print e.reason
 			sys.exit()
@@ -114,7 +114,7 @@ class HTTPThread(threading.Thread):
 		try:
 			while flag<2:
 				code=httpcall(url)
-				if (code==1000) & (safe==1):
+				if (code==2000) & (safe==1):
 					set_flag(2)
 		except Exception, ex:
 			pass
